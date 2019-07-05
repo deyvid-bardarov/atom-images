@@ -1,0 +1,38 @@
+#album {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 600px 600px;
+  justify-content: center;
+
+  @media only screen and (max-width: 1200px) {
+   grid-template-columns: 1fr;
+  }
+
+  .favorite svg {
+    color: red;
+    width: 30px;
+    height: 30px;
+
+  }
+  
+  a {
+    cursor: pointer;
+    &.pulse {
+      animation: pulse .5s;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
